@@ -42,23 +42,33 @@ class InventoryMenu extends \humhub\widgets\BaseMenu
             'isVisible' => \Yii::$app->user->isAdmin(),
         ));
 
+//        $this->addItem(array(
+//            'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Categorias'),
+//            'url' => Url::toRoute('/inventory/category'),
+//            'icon' => '<i class="fa fa-check-circle"></i>',
+//            'group' => 'manage',
+//            'sortOrder' => 201,
+//            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'category'),
+//            'isVisible' => \Yii::$app->user->isAdmin(),
+//        ));
+        
         $this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Categorias'),
-            'url' => Url::toRoute('/inventory/category'),
+            'url' => Url::toRoute('/inventory/categoria'),
             'icon' => '<i class="fa fa-check-circle"></i>',
             'group' => 'manage',
-            'sortOrder' => 201,
-            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'category'),
+            'sortOrder' => 202,
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'categoria'),
             'isVisible' => \Yii::$app->user->isAdmin(),
         ));
         
         $this->addItem(array(
-            'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Categorias1'),
-            'url' => Url::toRoute('/inventory/categoria'),
+            'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Unidades de Medidas'),
+            'url' => Url::toRoute('/inventory/unidad-medida'),
             'icon' => '<i class="fa fa-check-circle"></i>',
             'group' => 'manage',
-            'sortOrder' => 201,
-            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'categoria'),
+            'sortOrder' => 203,
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'unidad-medida'),
             'isVisible' => \Yii::$app->user->isAdmin(),
         ));
         

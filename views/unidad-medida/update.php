@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model humhub\modules\inventory\models\Categoria */
+/* @var $model humhub\modules\inventory\models\UnidadMedida */
 
-$this->title = 'Actualizar Categoria: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Categorias', 'url' => ['index']];
+$this->title = 'Actualizar Unidad de Medida: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Unidades de Medidas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Actualizar';
 ?>
