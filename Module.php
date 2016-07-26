@@ -50,9 +50,9 @@ class Module extends \humhub\modules\content\components\ContentContainerModule
     public function getContentContainerDescription(ContentContainerActiveRecord $container)
     {
         if ($container instanceof Space) {
-            return Yii::t('CalendarModule.base', 'Adds an event calendar to this space.');
+            return Yii::t('InventoryModule.base', 'Adds an event calendar to this space.');
         } elseif ($container instanceof User) {
-            return Yii::t('CalendarModule.base', 'Adds an calendar for private or public events to your profile and mainmenu.');
+            return Yii::t('InventoryModule.base', 'Adds an calendar for private or public events to your profile and mainmenu.');
         }
     }
 
