@@ -33,12 +33,12 @@ class InventoryMenu extends \humhub\widgets\BaseMenu
         ));
 
         $this->addItem(array(
-            'label' => \Yii::t('AdminModule.widgets_AdminMenuWidget', 'Dashboard'),
-            'url' => Url::toRoute(['/inventory/global']),
-            'icon' => '<i class="fa fa-user"></i>',
+            'label' => \Yii::t('AdminModule.widgets_AdminMenuWidget', 'Productos'),
+            'url' => Url::toRoute(['/inventory/producto']),
+            'icon' => '<i class="fa fa-cube"></i>',
             'group' => 'manage',
             'sortOrder' => 200,
-            'isActive' => (\Yii::$app->controller->module && \Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'global'),
+            'isActive' => (\Yii::$app->controller->module && \Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'producto'),
             'isVisible' => \Yii::$app->user->isAdmin(),
         ));
 
@@ -55,7 +55,7 @@ class InventoryMenu extends \humhub\widgets\BaseMenu
         $this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Categorias'),
             'url' => Url::toRoute('/inventory/categoria'),
-            'icon' => '<i class="fa fa-check-circle"></i>',
+            'icon' => '<i class="fa fa-th"></i>',
             'group' => 'manage',
             'sortOrder' => 202,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'categoria'),
@@ -65,7 +65,7 @@ class InventoryMenu extends \humhub\widgets\BaseMenu
         $this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Unidades de Medidas'),
             'url' => Url::toRoute('/inventory/unidad-medida'),
-            'icon' => '<i class="fa fa-check-circle"></i>',
+            'icon' => '<i class="fa fa-balance-scale"></i>',
             'group' => 'manage',
             'sortOrder' => 203,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory' && Yii::$app->controller->id == 'unidad-medida'),

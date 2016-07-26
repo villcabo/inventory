@@ -56,8 +56,8 @@ class Producto extends \yii\db\ActiveRecord
             'codigo' => 'Codigo',
             'nombre' => 'Nombre',
             'descripcion' => 'Descripcion',
-            'categoria_id' => 'Categoria ID',
-            'unidad_medida_id' => 'Unidad Medida ID',
+            'categoria_id' => 'Categoria',
+            'unidad_medida_id' => 'Unidad de Medida',
             'valor' => 'Valor',
             'removed' => 'Removed',
         ];

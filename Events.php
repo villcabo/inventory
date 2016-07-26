@@ -24,8 +24,8 @@ class Events extends \yii\base\Object
         if ($user->isModuleEnabled('inventory')) {
             $event->sender->addItem(array(
                 'label' => Yii::t('InventoryModule.base', 'Inventario'),
-                'url' => Url::to(['/inventory/global']),
-                'icon' => '<i class="fa fa-file"></i>',
+                'url' => Url::to(['/inventory/producto']),
+                'icon' => '<i class="fa fa-cubes"></i>',
                 'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'inventory'),
                 'sortOrder' => 300,
             ));

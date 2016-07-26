@@ -5,29 +5,35 @@ use humhub\widgets\GridView;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
-/* @var $searchModel humhub\modules\inventory\models\UnidadMedidaFind */
+/* @var $searchModel humhub\modules\inventory\models\ProductoFind */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Unidades de Medidas';
+$this->title = 'Productos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
 <div class="panel-heading"><?= Html::encode($this->title) ?></div>
 <div class="panel-body">
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Nueva Unidad de Medida', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Nuevo Producto', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?=
     GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            'id',
-            'nombre_corto',
+            'codigo',
             'nombre',
+            [
+                'label' => 'Unidad de Medida',
+                'value' => 'unidadMedida.nombre'
+            ],
+            [
+                'label' => 'Categoria',
+                'value' => 'categoria.nombre'
+            ],
             [
                 'header' => Yii::t('AdminModule.views_user_index', 'Acción'),
                 'class' => 'yii\grid\ActionColumn',
@@ -50,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                         ],
                     ],
-        ],
-    ]);
-    ?>
+                ],
+            ]);
+            ?>
 </div>

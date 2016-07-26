@@ -3,16 +3,16 @@
 namespace humhub\modules\inventory\controllers;
 
 use Yii;
-use humhub\modules\inventory\models\UnidadMedida;
-use humhub\modules\inventory\models\UnidadMedidaFind;
+use humhub\modules\inventory\models\Producto;
+use humhub\modules\inventory\models\ProductoFind;
 use humhub\modules\inventory\components\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * UnidadMedidaController implements the CRUD actions for UnidadMedida model.
+ * ProductoController implements the CRUD actions for Producto model.
  */
-class UnidadMedidaController extends Controller
+class ProductoController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class UnidadMedidaController extends Controller
     }
 
     /**
-     * Lists all UnidadMedida models.
+     * Lists all Producto models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new UnidadMedidaFind();
+        $searchModel = new ProductoFind();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class UnidadMedidaController extends Controller
     }
 
     /**
-     * Displays a single UnidadMedida model.
+     * Displays a single Producto model.
      * @param string $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class UnidadMedidaController extends Controller
     }
 
     /**
-     * Creates a new UnidadMedida model.
+     * Creates a new Producto model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new UnidadMedida();
+        $model = new Producto();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -75,7 +75,7 @@ class UnidadMedidaController extends Controller
     }
 
     /**
-     * Updates an existing UnidadMedida model.
+     * Updates an existing Producto model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param string $id
      * @return mixed
@@ -94,7 +94,7 @@ class UnidadMedidaController extends Controller
     }
 
     /**
-     * Deletes an existing UnidadMedida model.
+     * Deletes an existing Producto model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param string $id
      * @return mixed
@@ -109,15 +109,15 @@ class UnidadMedidaController extends Controller
     }
 
     /**
-     * Finds the UnidadMedida model based on its primary key value.
+     * Finds the Producto model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param string $id
-     * @return UnidadMedida the loaded model
+     * @return Producto the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = UnidadMedida::findOne($id)) !== null) {
+        if (($model = Producto::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
